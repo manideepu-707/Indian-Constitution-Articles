@@ -1,0 +1,71 @@
+/* General body */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.nav-link {
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important;
+}
+
+/* Cards for forms */
+.card {
+  border-radius: 15px;
+  background: #fff;
+}
+
+/* Form elements */
+.form-control {
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 5px rgba(13, 110, 253, 0.4);
+}
+
+/* Button */
+.btn-primary {
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 500;
+  background-color: #0d6efd;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+/* Alert messages */
+.alert {
+  font-size: 0.9rem;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 576px) {
+  .card {
+    margin: 0 15px;
+  }
+}

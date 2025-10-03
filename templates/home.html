@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indian Constitution - Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{% static 'images/flag.png' %}"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Indian Constitution</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'articles' %}">Articles</a>
+            </li>
+            {%if user.is_authenticated%}
+            <li class="nav-item">
+              <a class="nav-link">Hello, {{user.first_name}}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'logout' %}">logout</a>
+            </li>
+            {% else%}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'register' %}">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'login' %}">Login</a>
+            </li>
+            {% endif%}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-light py-5 text-center">
+      <div class="container">
+        <h1 class="display-4 fw-bold">
+          Welcome to the Indian Constitution Portal
+        </h1>
+        <p class="lead text-muted" style="font-weight: 600; font-size: 30px">
+          Explore the articles, values, and essence of the world’s largest
+          democracy.
+        </p>
+        <a href="{% url 'articles' %}" class="btn btn-primary btn-lg"
+          >Explore Articles</a
+        >
+      </div>
+    </header>
+
+    <!-- Content Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card shadow border-0 h-100">
+              <img
+                src="{% static 'images/preamble.jpg' %}"
+                class="card-img-top"
+                style="height: auto"
+                alt="Preamble"
+              />
+              <div class="card-body">
+                <h5 class="card-title">The Preamble</h5>
+                <p class="card-text">
+                  Discover the guiding principles that define the spirit of our
+                  Constitution.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow border-0 h-100">
+              <img
+                src="{% static 'images/fundamental.jpg' %}"
+                style="height: auto"
+                alt="Fundamental Rights"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Fundamental Rights</h5>
+                <p class="card-text">
+                  Understand the basic rights guaranteed to every citizen of
+                  India.
+                </p>
+              </div>
+              <img
+                src="{% static 'images/details.jpg' %}"
+                style="height: 300px"
+                alt="Fundamental Rights"
+              />
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow border-0 h-100">
+              <img
+                src="{% static 'images/parliament.webp' %}"
+                class="card-img-top"
+                alt="Parliament"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Indian Parliament</h5>
+                <p class="card-text">
+                  Learn about the role of the legislature in shaping the
+                  nation’s future.
+                </p>
+              </div>
+              <img
+                src="{% static 'images/extra.jpg' %}"
+                alt="Parliament"
+                style="height: auto"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-3">
+      <p class="mb-0">
+        © 2025 Indian Constitution Project | All Rights Reserved
+      </p>
+    </footer>
+
+    <!-- Bootstrap JS (only for navbar collapse, no custom JS) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

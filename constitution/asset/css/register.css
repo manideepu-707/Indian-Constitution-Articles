@@ -1,0 +1,118 @@
+/* General Body */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #ffc107 !important;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important;
+}
+
+/* Hero / Header Section */
+header {
+  background: url("../images/constitution_bg.jpg") no-repeat center center/cover;
+  color: #fff;
+}
+
+header h1 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+header p {
+  font-size: 1.1rem;
+}
+
+/* Cards */
+.card {
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Forms */
+form input,
+form select,
+form textarea {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 5px rgba(13, 110, 253, 0.5);
+  outline: none;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+/* Footer */
+footer {
+  background-color: #212529;
+  color: #f8f9fa;
+  font-size: 0.9rem;
+}
+
+/* Article Section */
+.card-text {
+  color: #555;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Search Bar */
+section.bg-light form {
+  margin-top: 20px;
+}
+
+section.bg-light input.form-control {
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+section.bg-light button {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+}

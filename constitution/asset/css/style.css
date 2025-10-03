@@ -1,0 +1,30 @@
+/* style.css */
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f5f7;
+}
+
+/* Navbar brand */
+.navbar-brand {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+/* Hero Section */
+header {
+  background: url("../images/flag.jpg") center/cover no-repeat;
+  min-height: 600px;
+
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+  font-weight: 800;
+}
+
+.card img {
+  height: 220px;
+  object-fit: cover;
+}

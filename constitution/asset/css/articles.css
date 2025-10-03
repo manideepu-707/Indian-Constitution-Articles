@@ -1,0 +1,28 @@
+/* Articles list */
+.card {
+  width: 100%; /* full width */
+  border-radius: 0.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-body {
+  padding: 1.5rem; /* better spacing */
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #0d6efd;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
